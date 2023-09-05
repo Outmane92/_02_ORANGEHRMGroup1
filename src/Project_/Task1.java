@@ -84,7 +84,18 @@ public class Task1 extends BaseDriver {
 
         Assert.assertEquals(UserNameCheck.getText(),newUserName);
 
+        WebElement DeleteUserNameButton = driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[2]/div[3]/div/div[1]/div/div[1]/div/label/span/i"));
+        DeleteUserNameButton.click();
+
+        WebElement DeleteButton = driver.findElement(By.xpath("//*[@class=\"oxd-button oxd-button--medium oxd-button--label-danger orangehrm-horizontal-margin\"]"));
+        DeleteButton.click();
+
+        WebElement DeleteButton1 = driver.findElement(By.xpath("//*[@class=\"oxd-button oxd-button--medium oxd-button--label-danger orangehrm-button-margin\"]"));
+        DeleteButton1.click();
+
+
+
         MyMethods.myWait(4);
-        waitAndquit();
+//        waitAndquit();
     }
 }
